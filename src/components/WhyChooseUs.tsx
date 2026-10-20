@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
         <Reveal direction="up" className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-5">
             <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-slate-300">A different kind of contractor</span>
+            <span className="text-xs font-semibold tracking-widest uppercase text-slate-300">A different kind of crew</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight max-w-2xl mx-auto leading-[1.1]">
             Don't hire us because we said so.
@@ -24,18 +24,15 @@ export default function WhyChooseUs() {
 
         {/* Single narrative experience */}
         <Reveal direction="up">
-          <div className="relative rounded-3xl bg-gradient-to-br from-blue-500/15 via-white/[0.03] to-transparent p-8 md:p-12 border border-white/10 overflow-hidden">
+          <div className="relative rounded-3xl bg-gradient-to-br from-blue-500/15 via-white/[0.03] to-transparent p-8 md:p-10 border border-white/10 overflow-hidden">
             <p className="text-xl md:text-2xl text-white font-medium leading-relaxed">
-              Close your eyes for a second. Imagine running your hand along the wall — your fingers never stumble. No ridge, no bump, no seam. Just one unbroken sweep from corner to corner, and something in your chest goes <span className="text-blue-400 font-bold">"oh."</span>
+              Run your hand along the wall — your fingers never stumble. No ridge, no bump, no seam. Just one unbroken sweep, and something in your chest goes <span className="text-blue-400 font-bold">"oh."</span>
             </p>
-            <p className="mt-5 text-lg text-slate-300 leading-relaxed">
-              Now imagine the morning we show up. The knock comes at 8:00 sharp — not 8:15, not "sometime today." Plastic goes down. Shoes come off. Your floors are treated like they're ours. By lunch you've forgotten we're here, because the work is quiet, clean, and on schedule. You don't manage us. You just get to watch it happen.
+            <p className="mt-4 text-lg text-slate-300 leading-relaxed">
+              We show up at 8:00 sharp. Plastic down, shoes off, floors protected. Quiet, clean, on schedule — you don't manage us, you just watch it happen.
             </p>
-            <p className="mt-5 text-lg text-slate-300 leading-relaxed">
-              And at the end? No surprise line items. No "while we were in there" upsells. The number on the quote is the number on the invoice — every time. You sleep easy, and the only thing left to decide is which color to paint.
-            </p>
-            <p className="mt-6 text-base text-slate-400 italic">
-              That's the whole experience. That's what 20 years of practice buys you.
+            <p className="mt-4 text-lg text-slate-300 leading-relaxed">
+              No surprise line items, no upsells. The number on the quote is the number on the invoice — every time.
             </p>
           </div>
         </Reveal>
@@ -78,8 +75,8 @@ export default function WhyChooseUs() {
               Only 3 quote slots left this week
             </span>
           </div>
-          <p className="text-slate-400 text-sm max-w-md mx-auto mb-5">
-            We cap bookings at 8 new projects a week so every wall gets the attention it deserves. Once they're gone, the next opening is usually 3 weeks out.
+          <p className="text-slate-300 text-sm max-w-md mx-auto mb-5">
+            We cap bookings at 8 new projects a week. Once they're gone, the next opening is usually 3 weeks out.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a

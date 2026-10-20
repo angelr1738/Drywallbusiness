@@ -36,6 +36,15 @@ export default function ChatAssistant() {
     if (open) setTimeout(() => inputRef.current?.focus(), 300);
   }, [open]);
 
+  useEffect(() => {
+    if (sessionStorage.getItem('em-chat-shown')) return;
+    const timer = setTimeout(() => {
+      setOpen(true);
+      sessionStorage.setItem('em-chat-shown', '1');
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const typeResponse = (text: string, action?: { label: string; href: string }) => {
     setTyping(true);
     setDisplayedText('');

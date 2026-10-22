@@ -44,7 +44,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
     : [];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/40 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-brand-950/70 backdrop-blur-lg border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20 gap-4">
           <a href="#top" className="flex-shrink-0">
@@ -53,7 +53,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
 
           {/* Search */}
           <div className="relative flex-1 max-w-sm hidden md:block">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 rounded-full px-3 py-1.5 focus-within:ring-2 focus-within:ring-blue-400 focus-within:bg-white transition-all">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur border border-white/15 rounded-full px-3 py-1.5 focus-within:ring-2 focus-within:ring-brand-400 focus-within:bg-white transition-all">
               <Search className="w-4 h-4 flex-shrink-0 text-white/60" />
               <input
                 value={query}
@@ -79,9 +79,9 @@ export default function Header({ onTrackProject }: HeaderProps) {
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map(link => (
               <a key={link.href} href={link.href}
-                className="relative font-medium text-sm transition-colors group text-white hover:text-blue-300">
+                className="relative font-medium text-sm transition-colors group text-slate-200 hover:text-brand-300">
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-blue-400" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-brand-400" />
               </a>
             ))}
           </nav>
@@ -90,7 +90,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
             {user ? (
               <div className="flex items-center gap-2">
                 <button onClick={onTrackProject}
-                  className="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-3 py-2 rounded-lg transition-colors">
+                  className="flex items-center gap-1.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold px-3 py-2 rounded-lg transition-colors shadow-glow">
                   <User className="w-4 h-4" />My Project
                 </button>
                 <button onClick={() => signOut()}
@@ -101,7 +101,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
               </div>
             ) : (
               <button onClick={onTrackProject}
-                className="flex items-center gap-1.5 text-sm font-medium px-3 py-2 rounded-lg transition-colors border border-white/30 text-white hover:border-blue-300 hover:text-blue-200">
+                className="flex items-center gap-1.5 text-sm font-medium px-3 py-2 rounded-lg transition-colors border border-white/25 text-slate-200 hover:border-brand-300 hover:text-brand-200">
                 <User className="w-4 h-4" />Track Project
               </button>
             )}
@@ -110,7 +110,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
               <Calendar className="w-4 h-4" />Book
             </a>
             <a href={PHONE_HREF}
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 shadow-md text-sm shine-on-hover">
+              className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30 text-sm shine-on-hover">
               <Phone className="w-4 h-4" />{PHONE_NUMBER}
             </a>
           </div>
@@ -125,7 +125,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-black border-t border-white/10 px-4 pb-4 pt-2 space-y-1">
+        <div className="lg:hidden bg-brand-950 border-t border-white/10 px-4 pb-4 pt-2 space-y-1">
           {/* Mobile search */}
           <div className="relative mb-3">
             <div className="flex items-center gap-2 bg-white/10 rounded-xl px-3 py-2.5">
@@ -146,7 +146,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
           </div>
           {navLinks.map(link => (
             <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}
-              className="block text-white hover:text-blue-300 font-medium py-2.5 border-b border-white/10">
+              className="block text-slate-200 hover:text-brand-300 font-medium py-2.5 border-b border-white/10">
               {link.label}
             </a>
           ))}
@@ -159,7 +159,7 @@ export default function Header({ onTrackProject }: HeaderProps) {
               className="flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold py-2.5 rounded-xl">
               <Calendar className="w-4 h-4" />Book a Quote
             </a>
-            <a href={PHONE_HREF} className="flex items-center justify-center gap-2 bg-blue-600 text-white font-semibold py-3 rounded-xl">
+            <a href={PHONE_HREF} className="flex items-center justify-center gap-2 bg-emerald-600 text-white font-semibold py-3 rounded-xl">
               <Phone className="w-4 h-4" />{PHONE_NUMBER}
             </a>
           </div>
